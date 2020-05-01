@@ -1,0 +1,11 @@
+MySQ进阶版本
+实现一个内连接
+	方法一 :select 字段名 from 表名1 join 表名2 in  判断条件 and 判断条件2.
+	方法二: select 字段名1,字段名2 from 表民1,表名2 where 判断提交1 判断条件2.
+实现一个外连接
+	外连接为一个左链接: select (*) (或者是需要查询的那些东西) from 表名1 left join 表名2 on 链接条件 安达 链接条件2.
+	外连接为一个右链接: select (*)(或者需要链接的列) from 表名1 right join 表名2 on 链接条件
+实现一个自连接
+	select 链接的列 from 表名 where 链接条件
+实现一个子查询
+	子查询表实质嵌入在其他select语句,也叫镶嵌查询.
