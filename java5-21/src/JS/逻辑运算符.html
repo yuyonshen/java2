@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+</head>
+<body>
+<script>
+    document.write(((3>4)&&(4<5))+"<br>");
+    document.write(((4>3)&&(5<4))+"<br>");
+    document.write((3<4&&5>4)+"<br>");
+    /*
+    !  非的判断
+        number 0或者NaN都为假 ,其余的都是真
+        String 除了空字符串为false ,其余都是true
+        null或者 undefult 否是false
+        对象 所有对象都是true
+     */
+    var a=0;
+    var b=1;
+    document.write(!!a+"<br>");
+    document.write(!!b+"<br>");
+    var str="";
+    var str2="123"
+    document.write(!!str+"<br>");
+    document.write(!!str2+"<br>");
+    var str3=null;
+    var str4=undefined;
+    document.write(!!str3+"<br>");
+    document.write(!!str4+"<br>");
+
+    var data=new Data();
+    document.write(!!data+"<br>");
+</script>
+</body>
+</html>
