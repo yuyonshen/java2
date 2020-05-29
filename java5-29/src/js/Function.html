@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function对象</title>
+    <script>
+
+        /*
+        1.Function对象的创建
+               两种常见的创建的方式
+         */
+        // function add(a,b,c) {
+        //     alert(a+b+c);
+        // }
+        //     add(1,2,3);
+        // var add2=function (a,b,c) {
+        //     alert(a-b);
+        // }
+        // add2(3,4);
+        /*
+      2.  function对象的一个属性为length获取参数的个数
+
+         */
+        // function add3(a,b,c){
+        //     alert(add3.length);
+        // }
+        // add3(1,2,2);
+        /*
+        3.特点:1相同的芳名名称不会报错的,只会把原来的方法覆盖了
+                2对象就是这个方法体
+                3.js中内置了一个数组arguments
+         */
+        // function add4(a,b,c){
+        //     return a+b+c;
+        // }
+        // var num=add4(1,2,3,4);
+        //
+        //
+        // function add4(a,b,c) {
+        //     return a-b-c;
+        // }
+        // var num=add4(1,2,3);
+        // alert(num)
+        /*
+        获取多个数字相加
+         */
+        function  add5(){
+            var sum=0;
+            for(var i=0;i<arguments.length;i++){
+                 sum+=arguments[i];
+            }
+            return sum;
+        }
+        alert(add5(1,2,3,4));
+    </script>
+
+</head>
+<body>
+
+
+</body>
+</html>
