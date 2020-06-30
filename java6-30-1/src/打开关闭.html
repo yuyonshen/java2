@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id ="openb"type="submit" value="打开">
+<input id="closehaha"type="submit" value="离开">
+<script>
+    var openb = document.getElementById("openb");
+
+    var newA;
+    openb.onclick=function () {
+        newA=open("https://www.baidu.com")
+
+    }
+    var closehaha= document.getElementById("closehaha");
+    closehaha.onclick=function () {
+            newA.close();
+    }
+
+</script>
+</body>
+</html>

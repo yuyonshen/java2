@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img id=off src="img2/off.gif">
+<script>
+    var off = document.getElementById("off");
+
+    var flag=false;
+    off.onclick= function() {
+        if(flag) {
+            off.src = "img2/off.gif"
+            flag=false;
+        }else{
+            off.src="img2/on.gif"
+            flag=true;
+        }
+    }
+    confirm("你要离开吗");
+
+</script>
+</body>
+</html>
