@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border: 1px solid;
+            width: 500px;
+            margin-left: 30%;
+
+        }
+        td,th{
+            border:1px solid;
+            text-align: center;
+        }
+        div{
+            margin-left: 30%;
+            margin-top: 10px;
+        }
+        .out{
+            background-color: white;
+        }
+        .over{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<table >
+    <tr>
+        <th><input type="checkbox" name="cb"></th>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>性别</td>
+
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="cb"></td>
+    <td>1</td>
+    <td>令狐冲</td>
+    <td>男</td>
+     <td><a href="javascript:void(0);">删除</a></td>
+
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>2</td>
+        <td>岳不群</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>3</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);">删除</a></td>
+    </tr>
+</table>
+<div>
+<input type="button" id="selectAll" value="全选">
+<input type="button" id="unSelectAll" value="全不选">
+<input type="button" id="selectRev" value="反选">
+    </div>
+<script>
+
+    window.onload=function () {
+        document.getElementById("selectAll").onclick=function () {
+            var cb = document.getElementsByName("cb");
+            for(var i=0;i<cb.length;i++){
+                cb[i].checked=true;
+            }
+        }
+        document.getElementById("unSelectAll").onclick=function () {
+            var cb = document.getElementsByName("cb");
+            for(var i=0;i<cb.length;i++){
+                cb[i].checked=false;
+            }
+        }
+        document.getElementById("selectRev").onclick=function () {
+            var cb = document.getElementsByName("cb");
+            for(var i=0;i<cb.length;i++){
+                cb[i].checked = !cb[i].checked;
+            }
+        }
+        var tr = document.getElementsByTagName("tr");
+        for(var i=0;i<tr.length;i++){
+            tr[i].onmouseover=function () {
+                this.className="over";
+            }
+            tr[i].onmouseout=function () {
+                this.className="out"
+            }
+        }
+    }
+</script>
+</body>
+</html>
